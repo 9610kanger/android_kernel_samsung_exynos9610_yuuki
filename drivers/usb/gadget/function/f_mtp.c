@@ -1977,6 +1977,7 @@ struct usb_function *function_alloc_mtp_ptp(struct usb_function_instance *fi,
 	dev->function.free_func = mtp_free;
 	fi->f = &dev->function;
 
+	mutex_init(&dev->read_mutex);
 	return &dev->function;
 #endif
 }
