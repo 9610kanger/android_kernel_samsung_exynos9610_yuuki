@@ -62,7 +62,7 @@ module_param(latency_factor, uint, 0644);
 
 static DEFINE_PER_CPU(struct cpuidle_device *, acpi_cpuidle_device);
 
-struct cpuidle_driver acpi_idle_driver = {
+static struct cpuidle_driver acpi_idle_driver = {
 	.name =		"acpi_idle",
 	.owner =	THIS_MODULE,
 };
@@ -1460,6 +1460,13 @@ int acpi_processor_power_init(struct acpi_processor *pr)
 {
 	int retval;
 	struct cpuidle_device *dev;
+
+	/*
+	 * The code below only works if the current cpuidle driver is the ACPI
+	 * idle driver.
+	 */
+	if (cpuidle_get_driver() != &acpi_idle_driver)
+		return;
 
 	if (disabled_by_idle_boot_param())
 		return 0;
