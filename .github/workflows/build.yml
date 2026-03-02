@@ -1,4 +1,4 @@
-name: BUild Kernel (Galaxy A50 & M30s)
+name: Build Kernel (Galaxy A50 & M30s)
 
 on:
   workflow_dispatch:
