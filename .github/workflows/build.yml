@@ -1,4 +1,4 @@
-name: build
+name: BUild Kernel (Galaxy A50 & M30s)
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        device: [a50]
+        device: [a50, m30s]
         variant: [oneui, aosp]
         ksu: ['', -k]
         susfs: ['', -s]

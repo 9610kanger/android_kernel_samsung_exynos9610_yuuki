@@ -132,7 +132,7 @@ SET_ANDROIDVERSION() {
 }
 SET_LOCALVERSION() {
  local commit_hash=$(git rev-parse --short HEAD)
- export LOCALVERSION=" - Mint@$commit_hash"
+ export LOCALVERSION=" - Mint"
 }
 SET_ZIPNAME() {
     local MINT_TYPE MINT_SELINUX ONEUI_VERSION ROOT_SOLUTION
