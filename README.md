@@ -1,10 +1,10 @@
-![Mint branding](https://i.ibb.co/9WV53PD/Banner-New-Dark.png)
+<img width="3152" height="1014" alt="banner" src="https://github.com/user-attachments/assets/49c310b9-29a6-42fb-8fac-f4ce4dc10236" />
 
-# Mint Kernel
+# Yuuki Kernel
 
-_Freshen up your Galaxy. An optimized, One UI-first kernel for Samsung Galaxy devices on the Exynos 9610 platform._
+_Freshen up your Galaxy. An optimized, One UI-first kernel for Samsung Galaxy devices on the Exynos 9610 platform that based on Mint source._
 
-#### Common Mint kernel source for the Exynos 9610 Platform
+#### Common Yuuki kernel source for the Exynos 9610 Platform
 
 Supports the following devices:
 
@@ -32,7 +32,7 @@ Mint Kernel will **never** be possible without the unwavering work of these awes
 
 ## About
 
-Mint is an optimized kernel source based on Samsung's open-source kernel drops of the Galaxy A50. Additional features include:
+Yuuki is an optimized kernel source based on Samsung's open-source kernel drops of the Galaxy A50. Additional features include:
 
  - Built with LLVM/Clang (`proton-clang`) 13
  - Built with Link-Time Optimizations (LTO) enabled
