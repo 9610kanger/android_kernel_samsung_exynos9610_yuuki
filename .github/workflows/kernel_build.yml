@@ -1,4 +1,4 @@
-name: Build Kernel (Galaxy A50 & M30s)
+name: Build Yuuki Kernel (Galaxy A50 & M30s)
 
 on:
   workflow_dispatch:
@@ -37,13 +37,12 @@ jobs:
         run: |
           export ROM=${{ matrix.rom }}
           export KSU=${{ matrix.ksu }}
-          export SUSFS=${{ matrix.susfs }}
           export SELINUX=${{ matrix.selinux }}
           export DEVICE=${{ matrix.device }}
           export VARIANT=${{ matrix.variant }}
-          ./build.sh -d $DEVICE -v $VARIANT $KSU $SUSFS $SELINUX --android 12
+          ./build.sh -d $DEVICE -v $VARIANT $KSU $SELINUX --android 12
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.device }}-${{ matrix.variant }}-${{ matrix.ksu }}-${{ matrix.susfs }}-${{ matrix.selinux }}
+          name: ${{ matrix.device }}-${{ matrix.variant }}-${{ matrix.ksu }}-${{ matrix.selinux }}
           path: "out/"

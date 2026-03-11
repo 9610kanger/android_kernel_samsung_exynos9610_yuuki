@@ -65,7 +65,6 @@ BUILD_KERNEL_KSU=false
 BUILD_KERNEL_CI=false
 BUILD_KERNEL_DIRTY=false
 BUILD_KERNEL_PERMISSIVE=false
-BUILD_SUSFS=false
 
 # Script commands
 script_echo() { echo "  $1"; }
@@ -132,7 +131,7 @@ SET_ANDROIDVERSION() {
 }
 SET_LOCALVERSION() {
  local commit_hash=$(git rev-parse --short HEAD)
- export LOCALVERSION=" - Mint"
+ export LOCALVERSION=" - Yuuki"
 }
 SET_ZIPNAME() {
     local MINT_TYPE MINT_SELINUX ONEUI_VERSION ROOT_SOLUTION
@@ -323,7 +322,6 @@ show_usage() {
 	script_echo "                          Not available for 'recovery' variant."
 	script_echo "-n, --no-clean            Do not clean up before build."
 	script_echo "-p, --permissive          Build kernel with SELinux fully permissive. NOT RECOMMENDED!"
-	script_echo "-s, --susfs               Build SusFS. NOT RECOMMENDED!"
 	script_echo " "
 	script_echo "-h, --help                Show this message."
 	script_echo " "
@@ -382,9 +380,6 @@ while [ $# -gt 0 ]; do
     -p|--permissive)
         BUILD_KERNEL_PERMISSIVE=true
         shift ;;
-    -s|--susfs)
-        BUILD_SUSFS=true
-        shift ;;
     -h|--help)
         show_usage ;;
     *)
@@ -442,7 +437,6 @@ script_echo "   Selected variant:   $MINT_VARIANT"
 script_echo "   Kernel version:     $VERSION.$PATCHLEVEL.$SUBLEVEL"
 script_echo "   Android version:    $BUILD_ANDROID_PLATFORM"
 script_echo "   KernelSU-enabled:   $BUILD_KERNEL_KSU"
-script_echo "   SusFS:              $BUILD_SUSFS"
 script_echo "   Output file:        $OUT_DIR/$FILE_NAME"
 
 # Setup build environment
