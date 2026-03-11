@@ -12,14 +12,11 @@ jobs:
         device: [a50, m30s]
         variant: [oneui, aosp]
         ksu: ['', -k]
-        susfs: ['', -s]
         selinux: ['', -p]
         exclude:
         - ksu: ''
-          susfs: -s
           selinux: ''
         - ksu: ''
-          susfs: -s
           selinux: -p
 
     steps:
