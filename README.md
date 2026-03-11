@@ -1,6 +1,6 @@
 <img width="3152" height="1014" alt="banner" src="https://github.com/user-attachments/assets/49c310b9-29a6-42fb-8fac-f4ce4dc10236" />
 
-# Yuuki Kernel
+# Yuuki Kernel (Based on Mint source)
 
 _Freshen up your Galaxy. An optimized, One UI-first kernel for Samsung Galaxy devices on the Exynos 9610 platform that based on Mint source._
 
