@@ -2,5 +2,5 @@
 
 [ ! -e "KernelSU/kernel/setup.sh" ] && \
 git clone https://github.com/rsuntk/KernelSU KernelSU && 
-cd KernelSU && git branch v3.0.0-30-legacy && 
+cd KernelSU && git branch v1.0.5-83-legacy && 
 cd ../
